@@ -9,22 +9,18 @@ public class NodNok {
         int a = new Scanner(System.in).nextInt();
         System.out.print("Введите 2-ое число: ");
         int b = new Scanner(System.in).nextInt();
-        int c = a * b / (greatestCommonDivisor(a, b));//Наименьшее общее кратное
-        System.out.print("НОК: ");
-        System.out.println(c);
+        System.out.println("НОК: " + leastCommonMultiple(a ,b));
         System.out.println("НОД: " + greatestCommonDivisor(a, b));
     }
 
-    private static int greatestCommonDivisor(int a, int b) {//Наибольший общий делитель
-        while (a != b) {
-            if (a < b) {
-                b -= a;
-            }
-            if (a > b) {
-                a -= b;
-            }
-        }
-        return a;
+    private static int greatestCommonDivisor(int a, int b) {
+
+        return b == 0 ? a : greatestCommonDivisor(b,a % b);
+    }
+
+    private static int leastCommonMultiple(int a, int b) {
+
+        return a / greatestCommonDivisor(a,b) * b;
     }
     }
 

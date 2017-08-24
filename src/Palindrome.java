@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Palindrome {
     public static void main(String[] args) {
         System.out.print("Напишите слово: ");
-        String s = new Scanner(System.in).next();
+        String s = new Scanner(System.in).nextLine();
         isPalindrome(s);
     }
 

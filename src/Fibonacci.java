@@ -9,13 +9,13 @@ public class Fibonacci {
         int k = new Scanner(System.in).nextInt();
         int n1 = 1;
         int n2 = 1;
-        int result = n1+n2;
-        System.out.print(n1+" "+n2+" ");
+        int result = n1 + n2;
+        System.out.print(n1 + " " + n2 + " ");
         while (result < k) {
             System.out.print(result + " ");
             n1 = n2;
             n2 = result;
-            result = n1+n2;
+            result = n1 + n2;
         }
     }
 }
